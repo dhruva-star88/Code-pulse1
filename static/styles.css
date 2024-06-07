@@ -327,7 +327,7 @@ body {
   }
   
   .services-section {
-    background-color: #e6f7ff;
+    background-color: #0a4967;
     margin-bottom: 20px;
     padding: 40px 0;
   }
@@ -356,7 +356,7 @@ body {
   
   .navbar {
     margin-bottom: 20px;
-    background-color: blue;
+    background-color: rgb(120, 120, 227);
   }
   
   /* Navbar Styling */
