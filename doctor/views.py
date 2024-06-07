@@ -29,11 +29,16 @@ def signin(request):
 
     return render(request, "login.html")
 
+# Configure logging
+logger = logging.getLogger(__name__)
+
 @login_required
 def retrive_p_data(request):
     if request.method == "POST":
         pid = request.POST.get('pid')
-        print(pid)
+        if pid:
+            logger.debug(f"Received PID: {pid}")
+        else:
+            logger.debug("PID not received")
          
-
     return render(request, "doc-profile.html")

@@ -8,7 +8,7 @@
     <body class="flex items-center justify-center min-h-screen bg-blue-100">
         <div class="main bg-white rounded-lg shadow-md p-10 transition-transform w-96 text-center">
             <h1 class="text-blue-600 text-3xl">patient id</h1>
-            <form action="" method="post">
+            <form method="POST" action="">
                 {% csrf_token %}
                 <label for="pid" class="block mt-4 mb-2 text-left text-gray-700 font-bold">patient id:</label>
                 <input type="text" id="pid" name="pid" placeholder="Enter your ID" class="block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-400" required>
