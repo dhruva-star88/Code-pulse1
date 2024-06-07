@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login
 from django.urls import reverse
 import logging
+from django.contrib.auth.decorators import login_required
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -9,6 +10,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 def index(request):
     return render(request, "home.html")
+
 
 def signin(request):
     if request.method == "POST":
@@ -27,10 +29,11 @@ def signin(request):
 
     return render(request, "login.html")
 
+@login_required
 def retrive_p_data(request):
     if request.method == "POST":
         pid = request.POST.get('pid')
         print(pid)
-        
+         
 
     return render(request, "doc-profile.html")
