@@ -294,7 +294,7 @@ body{
         transform: scale(1); 
       }
       100% {
-        color: blue; 
+        color: red; 
         transform: scale(1.1);
       }
     }
