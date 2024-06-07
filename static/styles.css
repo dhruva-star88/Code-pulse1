@@ -1,6 +1,4 @@
-body{
-    background-color: rgb(123, 0, 255);
-  }
+
   
 .card {
         margin: 10px;
@@ -14,7 +12,7 @@ body{
       }
 
  .welcome-section, .services-section, .contact-section {
-        padding: 20px 0;
+        padding:  0;
       }
    
   .head{
@@ -40,25 +38,7 @@ body{
       justify-content: center;
       
   }
-  
-  
-  
- 
-
-    .welcome-section {
-      background-color: #f8f9fa;
-      margin-bottom: 20px;
-      padding: 40px 0;
-    }
-    .services-section {
-      background-color: #f1f1f1;
-      margin-bottom: 20px;
-      padding: 40px 0;
-    }
-    .contact-section {
-      background-color: #f8f9fa;
-      padding: 40px 0;
-    }
+    
     .contact-section h2 {
       margin-bottom: 30px;
     }
@@ -77,20 +57,7 @@ body{
     }
     
    
-    .services-section h2 {
-      margin-bottom: 30px;
-      color: #007bff;
-    }
-    .services-section p {
-      margin-bottom: 40px;
-    }
-    .services-section .col-md-4 h4 {
-      margin-bottom: 15px;
-      color: #007bff;
-    }
-    .services-section .col-md-4 p {
-      font-size: 1.1rem;
-    }
+    
   
    
   .card {
@@ -225,10 +192,9 @@ body{
     .contact-section p {
       font-size: 1.1rem;
     }
-    .navbar {
-      margin-bottom: 20px;
+    .navbar-custom {
+        background-color: blue; /* Light blue background color */
     }
-    
     
     .services-section h2 {
       margin-bottom: 30px;
@@ -289,3 +255,179 @@ body{
       }
     }
     
+   
+    
+    @keyframes hoverScale {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.05);
+      }
+    }
+    
+   
+    .card:hover {
+      transform: scale(1.05);
+      animation: hoverScale 0.3s ease-in-out;
+    }
+    
+    
+    .navbar-brand {
+      animation: colorChange 1s infinite alternate; 
+      transition: transform 0.3s ease, color 0.5s ease; 
+       
+    }
+    
+  
+    @keyframes colorChange {
+      0% {
+        color: #000; 
+        transform: scale(1); 
+      }
+      100% {
+        color: #ff0000; 
+        transform: scale(1.1); 
+      }
+    }
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(111, 211, 247);
+  }
+  
+  .navbar-custom {
+    background-color: #add8e6; /* Light blue background color */
+  }
+  
+  .card {
+    margin: 10px;
+    transition: transform 0.3s ease; /* Adding transition for card hover effect */
+  }
+  
+  .card-body {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    margin-top: 10px;
+  }
+  
+  .welcome-section, .services-section, .contact-section {
+    padding: 20px 0;
+  }
+  
+  .welcome-section {
+    background-color: #e6f7ff;
+    margin-bottom: 20px;
+    padding: 40px 0;
+    animation: fadeInSlideUp 1s ease-in-out; /* Applying animation */
+  }
+  
+  .services-section {
+    background-color: #e6f7ff;
+    margin-bottom: 20px;
+    padding: 40px 0;
+  }
+  
+  .contact-section {
+    background-color: #e6f7ff;
+    padding: 40px 0;
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 30px;
+  }
+  
+  .contact-section .col-md-6 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-section h4 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+  }
+  
+  .navbar {
+    margin-bottom: 20px;
+    background-color: blue;
+  }
+  
+  /* Navbar Styling */
+  
+  
+  /* Services Section Styles */
+  .services-section h2 {
+    margin-bottom: 30px;
+    color: #007bff;
+  }
+  
+  .services-section p {
+    margin-bottom: 40px;
+  }
+  
+  .services-section .col-md-4 h4 {
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .services-section .col-md-4 p {
+    font-size: 1.1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes hoverScale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Adding hover effect for cards */
+  .card:hover {
+    transform: scale(1.05);
+    animation: hoverScale 0.3s ease-in-out;
+  }
+  
+  /* Animation and Color for Navbar Brand */
+  .navbar-brand {
+    animation: colorChange 1s infinite alternate; /* Change color animation */
+    transition: transform 0.3s ease, color 0.5s ease; /* Add transition for smoother animation */
+    font-weight: bold; /* Make the font bold */
+  }
+  
+  /* Define the color change animation */
+  @keyframes colorChange {
+    0% {
+      color: white; /* Initial color */
+      transform: scale(1); /* Initial scale */
+    }
+    100% {
+      color: #ff0000; /* Target color */
+      transform: scale(1.1); /* Scale up slightly */
+    }
+  }
+
+
+  .nav-link{
+    color: white;
+  }
