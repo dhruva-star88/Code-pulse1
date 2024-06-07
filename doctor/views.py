@@ -20,9 +20,12 @@ def signin(request):
         if user is not None:
             auth_login(request, user)
             logger.debug(f"Login successful for user: {username}")
-            return render(request, "test.html")
+            return render(request, "doc-profile.html")
         else:
             logger.debug(f"Login failed for user: {username}")
             return redirect(reverse('index'))  # Use URL name for redirection
 
     return render(request, "login.html")
+
+def retrive_p_data(request):
+    return render(request, "doc-profile.html")
