@@ -28,4 +28,9 @@ def signin(request):
     return render(request, "login.html")
 
 def retrive_p_data(request):
+    if request.method == "POST":
+        pid = request.POST.get('pid')
+        print(pid)
+        
+
     return render(request, "doc-profile.html")
