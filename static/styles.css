@@ -2,17 +2,18 @@ body{
     background-color: rgb(123, 0, 255);
   }
   
-      .card {
+.card {
         margin: 10px;
       }
-      .card-body {
+.card-body {
         font-size: 1.2rem;
         font-weight: bold;
       }
-      .btn-primary {
+.btn-primary {
         margin-top: 10px;
       }
-      .welcome-section, .services-section, .contact-section {
+
+ .welcome-section, .services-section, .contact-section {
         padding: 20px 0;
       }
    
@@ -42,19 +43,8 @@ body{
   
   
   
-  .card {
-      margin: 10px;
-    }
-    .card-body {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    .btn-primary {
-      margin-top: 10px;
-    }
-    .welcome-section, .services-section, .contact-section {
-      padding: 20px 0;
-    }
+ 
+
     .welcome-section {
       background-color: #f8f9fa;
       margin-bottom: 20px;
