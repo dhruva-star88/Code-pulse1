@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from patient_details.models import PatientData
 from django.contrib.auth.models import User
 from .forms import DoctorToPatientForm
-from .models import DoctorToPatientData
+from .models import DoctorToPatientData, EditedDoctorToPatientData
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -20,6 +20,7 @@ def index(request):
 def signin(request):
     if request.method == "POST":
         username = request.POST.get('uname')
+        request.session["username"] = username
         passwd = request.POST.get('pass')
         logger.debug(f"Attempting login with username: {username}")
 
@@ -95,3 +96,24 @@ def doc_to_pat_report(request):
  
 
     return render(request, "doc_to_pat_report.html")
+
+
+def pat_prev_rec(request):
+    return render(request, "pat-prev-record.html")
+
+def edit_record(request):
+    if request.method == "POST":
+        diagnosis = request.POST.get('radioOption')
+        medications = request.POST.get('textbox')
+        life_style_changes = request.POST.getlist('checkbox')
+        possible_procedures = request.POST.get('dropdown1')
+        next_appointment = request.POST.get('dropdown2')
+        lab_tests = request.POST.get('dropdown3')
+        reason = request.POST.get('reason')
+        
+
+        EditedDoctorToPatientData.objects.create(diagnosis=diagnosis, medications=medications, life_style_changes=life_style_changes,
+                                           possible_procedures=possible_procedures, next_appointment=next_appointment, lab_tests=lab_tests,
+                                           reason=reason)
+
+    return render(request, "edit-record.html")
