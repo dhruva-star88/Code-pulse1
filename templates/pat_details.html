@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Details Page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .blinking {
+            font-size: 50px;
+            font-weight: bolder;
+            animation: blinkingText 1s infinite alternate;
+        }
+
+        @keyframes blinkingText {
+            0% { color: #c41c1c; }
+            100% { color: rgb(3, 3, 71); }
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('../static/bg1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px 0; 
+            margin-left:0;
+          }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center  bg-blue-100 bagg">
+   
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand blinking" href="#">Jaydeva Hospital</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav"></div>
+    </nav>
+
+   
+    <div class="container mt-10 mx-auto px-4">
+        <h2 class="text-4xl font-bold text-blue-900 mb-6 text-center">Patient Details</h2>
+        <div class="bg-white rounded-lg shadow-md p-6 m-4 text-center w-full">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b-2 border-gray-300 text-left leading-tight text-2xl text-gray-800">Field</th>
+                        <th class="py-2 px-4 border-b-2 border-gray-300 text-left leading-tight text-2xl text-gray-800">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">Patient Name</td>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">Gender</td>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ gen }}</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">Age</td>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ age }}</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">Symptoms</td>
+                        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ symp }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="flex justify-center items-center text-center">
+            <a href="pat-report/" class="btn btn-primary">Report</a>
+        </div>
+    </div>
+
+   
+    <footer class="mt-10 text-center text-gray-600">
+        <p>&copy; 2024 Jaydeva Hospital. All rights reserved.</p>
+        <p><a href="#" class="text-blue-600 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-600 hover:underline">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

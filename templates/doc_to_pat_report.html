@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Form</title>
+    <link rel="stylesheet" href='{% static "style2.css" %}'>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+            {% csrf_token %}  
+            <h2>Medical Information Form</h2>
+            <table>
+                <tr>
+                    <td><label for="radio">Diagnosis:</label></td>
+                    <td style="display: flex;">
+                        <input type="radio" id="radioYes" name="radioOption" value="yes">
+                        <label for="radioYes">Yes</label>
+                        <input type="radio" id="radioNo" name="radioOption" value="no">
+                        <label for="radioNo">No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="textbox">Medications:</label></td>
+                    <td><input type="text" id="textbox" name="textbox"></td>
+                </tr>
+                <tr>
+                    <td><label>Lifestyle Changes:</label></td>
+                    <td>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="checkbox1" name="checkbox" value="low_fat_diet">
+                            <label for="checkbox1">Low-fat diet</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="checkbox2" name="checkbox" value="regular_exercise">
+                            <label for="checkbox2">Regular exercise</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="checkbox3" name="checkbox" value="quit_smoking">
+                            <label for="checkbox3">Quit smoking</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dropdown1">Possible Procedures:</label></td>
+                    <td>
+                        <select id="dropdown1" name="dropdown1">
+                            <option value="none">None</option>
+                            <option value="angioplasty">Angioplasty</option>
+                            <option value="bypass_surgery">Bypass surgery</option>
+                            <option value="heart_transplant">Heart transplant</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dropdown2">Next Appointment:</label></td>
+                    <td>
+                        <select id="dropdown2" name="dropdown2">
+                            <option value="none">None</option>
+                            <option value="1_week">1 week</option>
+                            <option value="2_week">2 weeks</option>
+                            <option value="3_week">3 weeks</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td><label for="dropdown3">Lab Tests:</label></td>
+                  <td>
+                      <select id="dropdown3" name="dropdown3">
+                          <option value="none">None</option>
+                          <option value="ECG">Electrocardiography</option>
+                          <option value="CT">CT Scan</option>
+                          <option value="MRI">MRI Scan</option>
+                          <option value="blood_test">Blood Test</option>
+                      </select>
+                  </td>
+              </tr>
+            </table>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
